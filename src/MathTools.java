@@ -1,6 +1,6 @@
 public class MathTools {
 
-    // барицентрические координаты точки для треугольника
+    // барицентрические координаты точки
     public static Coordinate barycentric(int x, int y, Coordinate xtr, Coordinate ytr){
         double x0=xtr.getX();
         double x1=xtr.getY();
@@ -15,7 +15,7 @@ public class MathTools {
         );
     }
 
-    // значение нормали треугольника
+    // вычислление нормали треугольника
     public static Coordinate normal(Coordinate c0, Coordinate c1, Coordinate c2){
         double x0=c0.getX();
         double x1=c1.getX();
