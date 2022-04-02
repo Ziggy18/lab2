@@ -6,6 +6,7 @@ public class Main {
             // проверка суммы барицентрических координат
             Coordinate barycentricCoordinate = MathTools.barycentric(1,1, new Coordinate(2, 5, 8), new Coordinate(3, 15, 6));
             System.out.println(barycentricCoordinate.getX()+ barycentricCoordinate.getY()+ barycentricCoordinate.getZ());
+            
             // проверка функции отрисовки треугольников
             Picture picture0 = new Picture(400, 400, new Color(100,100,220));
             PictureUtils.Triangle(picture0, new Coordinate(-100, -50, 50), new Coordinate(300, 370, 320), new Color(255,255,255));
