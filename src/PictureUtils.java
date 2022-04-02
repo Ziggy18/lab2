@@ -45,7 +45,7 @@ public class PictureUtils {
         return picture;
     }
 
-    // отрисовка треугольника с z-буффером
+    // с z-буффером
     public static Picture TriangleZ(Picture picture, Coordinate xtri, Coordinate ytri, Coordinate ztri, Color color) {
         int xmin = (int) Math.round(Math.min(xtri.getX(), Math.min(xtri.getY(), xtri.getZ())));
         int ymin = (int) Math.round(Math.min(ytri.getX(), Math.min(ytri.getY(), ytri.getZ())));
