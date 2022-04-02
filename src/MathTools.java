@@ -25,12 +25,8 @@ public class MathTools {
 
     // нормализованное скалярное произведение
     public static double normalizedDotProduct(Coordinate n, Coordinate v){
-        double nx=n.getX();
-        double ny=n.getY();
-        double nz=n.getZ();
-        double vx=v.getX();
-        double vy=v.getY();
-        double vz=v.getZ();
+        double nx=n.getX(); double ny=n.getY(); double nz=n.getZ();
+        double vx=v.getX(); double vy=v.getY(); double vz=v.getZ();
         return (nx* vx+ny*vy+nz*vz)/Math.sqrt((nx*nx+ny*ny+nz*nz)*(vx*vx+vy*vy+vz*vz));
     }
 }
