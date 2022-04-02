@@ -123,7 +123,7 @@ public class ObjectUtils {
             for(int j=1; j<peaks.size()-1; j++){
                 int v2=peaks.get(j).getP()>0?peaks.get(j).getP()-1:coordinates.size()+peaks.get(j).getP();
                 int v1=peaks.get(j+1).getP()>0?peaks.get(j+1).getP()-1:coordinates.size()+peaks.get(j+1).getP();
-                if(MathTools.normDotProduct(MathTools.normal(coordinates.get(v0),coordinates.get(v1),coordinates.get(v2)),new Coordinate(0,0,1))<0)
+                if(MathTools.normalizedDotProduct(MathTools.normal(coordinates.get(v0),coordinates.get(v1),coordinates.get(v2)),new Coordinate(0,0,1))<0)
                     PictureUtils.Triangle(picture,
                             new Coordinate(coordinates.get(v0).getX()*scale+xShift, (coordinates.get(v1).getX()*scale+xShift), (coordinates.get(v2).getX()*scale+xShift)),
                             new Coordinate(coordinates.get(v0).getY()*scale+yShift, (coordinates.get(v1).getY()*scale+yShift), (coordinates.get(v2).getY()*scale+yShift)),
@@ -147,7 +147,7 @@ public class ObjectUtils {
             for(int j=1; j<peaks.size()-1; j++){
                 int v2=peaks.get(j).getP()>0?peaks.get(j).getP()-1:coordinates.size()+peaks.get(j).getP();
                 int v1=peaks.get(j+1).getP()>0?peaks.get(j+1).getP()-1:coordinates.size()+peaks.get(j+1).getP();
-                double normal=MathTools.normDotProduct(MathTools.normal(coordinates.get(v0),coordinates.get(v1),coordinates.get(v2)),new Coordinate(0,0,1));
+                double normal=MathTools.normalizedDotProduct(MathTools.normal(coordinates.get(v0),coordinates.get(v1),coordinates.get(v2)),new Coordinate(0,0,1));
                 if(normal<0)
                     PictureUtils.Triangle(picture,
                             new Coordinate(coordinates.get(v0).getX()*scale+xShift, (coordinates.get(v1).getX()*scale+xShift), (coordinates.get(v2).getX()*scale+xShift)),
@@ -171,7 +171,7 @@ public class ObjectUtils {
             for(int j=1; j<peaks.size()-1; j++){
                 int v2=peaks.get(j).getP()>0?peaks.get(j).getP()-1:coordinates.size()+peaks.get(j).getP();
                 int v1=peaks.get(j+1).getP()>0?peaks.get(j+1).getP()-1:coordinates.size()+peaks.get(j+1).getP();
-                double normal=MathTools.normDotProduct(MathTools.normal(coordinates.get(v0),coordinates.get(v1),coordinates.get(v2)),new Coordinate(0,0,1));
+                double normal=MathTools.normalizedDotProduct(MathTools.normal(coordinates.get(v0),coordinates.get(v1),coordinates.get(v2)),new Coordinate(0,0,1));
                 if(normal<0)
                     PictureUtils.TriangleZ(picture,
                             new Coordinate(coordinates.get(v0).getX()*scale+xShift, (coordinates.get(v1).getX()*scale+xShift), (coordinates.get(v2).getX()*scale+xShift)),
