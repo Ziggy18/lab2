@@ -4,8 +4,7 @@ public class Main {
         try {
 
             // проверка суммы барицентрических координат
-            Coordinate barycentricCoordinate = MathTools.barycentric(
-                    10,10, new Coordinate(0.5, 5, 5.5), new Coordinate(-0.5, 500, -9.9));
+            Coordinate barycentricCoordinate = MathTools.barycentric(10,10, new Coordinate(0.5, 5, 5.5), new Coordinate(-0.5, 500, -9.9));
             System.out.println(barycentricCoordinate.getX()+ barycentricCoordinate.getY()+ barycentricCoordinate.getZ());
             // проверка функции отрисовки треугольников
             Picture picture0 = new Picture(400, 400, new Color(100,100,220));
