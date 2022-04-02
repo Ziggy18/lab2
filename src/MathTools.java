@@ -24,7 +24,7 @@ public class MathTools {
     }
 
     // нормализованное скалярное произведение
-    public static double normDotProduct(Coordinate n, Coordinate v){
+    public static double normalizedDotProduct(Coordinate n, Coordinate v){
         double nx=n.getX();
         double ny=n.getY();
         double nz=n.getZ();
